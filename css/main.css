@@ -1,0 +1,29 @@
+.main{
+	color:black;
+
+}
+
+.comment{
+	float:right;
+	margin:-40px auto 10px auto;
+}
+
+.suggestionRow{
+	background-color: rgba(0,0,0,.1);
+	margin:30px auto 0px auto;
+	padding:10px;
+	max-width: 700px;
+	border:1px solid grey;
+	border-radius:5px;
+}
+
+.suggestionContainer{
+	max-height:600px;
+	overflow: auto;
+}
+form{
+		
+
+	max-width: 500px;
+	margin: auto;
+}

@@ -1,0 +1,29 @@
+<div class="comments">
+	<div class="container-fluid">
+		<div class="container">
+			<h2 class='title'>{{post.title}}</h2>
+			
+			<div class="commentContainer">
+				<div class="CommentRows" ng-repeat="comment in post.comments | orderBy:'upvotes':true">
+					
+					<h3>{{comment.body}}</h3>
+					<p class="upvote"><span class="glyphicon glyphicon-plus-sign" ng-click="upVote(comment)"></span> Upvotes: {{comment.upvotes}}</p>
+				</div>
+
+			</div>
+
+			<a class="back" href="#/main"> <button class="btn btn-primary back"> Back </button> </a>
+		</div>
+
+		
+
+		<form ng-submit="addComment()" style="margin-top: 50px">
+			<h2> Submit Your Comments </h2>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Great ideas here" ng-model="title"></input>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+	</div>
+</div>

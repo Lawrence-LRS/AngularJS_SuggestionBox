@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+  <title>Suggestion Box</title>
+<!--   boostrap add on -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+<!--   css stylesheet for main page / or everything -->
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/comment.css" rel="stylesheet" />
+<!--  Vendor script callouts before program starts -->
+		<script src="js/vendor/angular.min.js"></script>
+<!-- J-Query -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<!-- Include the AngularJS routing library -->
+    <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+<!-- Javascript -->
+  <script type='text/javascript' src="js/main.js"></script>
+
+  </head>
+<!--   from the app module -->
+  <body ng-app="suggestionBox"> 
+  <div class="wrapper">
+    <div class="jumbotron">
+<!-- Header section (will have it hide with Jquery as you scroll down page) -->
+    <div class="header">
+      <div class="container-fluid">
+        <!-- logo section fixed sized -->
+        <div class="row">
+          <div class=" col-xs-6 col-sm-6 col-md-6">
+            <a href="../../../index.html"><div class="titleLogo"> 
+                <div class="logo"><img src="../../../img/LRS_Logo.png" class="img-circle"></div>
+                <p class="title">  Little Rocket Studio </p>
+              </div></a>
+          </div>
+          <!-- Right side NAV bar -->
+          <div class=" col-xs-6 col-sm-6 col-md-6">     
+            <ul class="navagation" >
+              <li class="menu" > <a class="links" href="../../About.html"> About </a> </li>
+              <!-- Portfolio is a dropdrop (Jquery) for multi-selection -->
+              <li class="menu" class="dropdown">
+              <a class="links" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" > Portfolio (doesn't drop) <span class="caret"> </span></a>
+                <ul class="dropdown-menu">
+                  <li> <a href="../../softDevelopment/softdevindex.html"> Software Development </a> </li> 
+                  <li> <a href="../../gameDevelopment/gamedevIndex.html"> Game Development </a> </li> 
+                  <li> <a href="../../webDevelopment/webdevindex.html"> Web Development </a> </li> 
+                  <li> <a href="../../GraphicDesign.html"> Graphic Design </a> </li>  
+                </ul>
+                </li>
+              <li class="menu" > <a class="links" href="../../Contact.html"> Contact </a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    
+    <!-- Jumbo Title ( words displayed in middle of city) -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="Jumbo-title">
+          <h2> <strong> Lawrence Goedrich's suggestion Box and comments. </strong> </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- region effected by the view switching -->
+		<div ng-view></div>
+
+
+    <div class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-6 .col-sm-6 col-md-6">
+          <div class="copyRightSpot">
+            <p>&copy; 2016 Little Rocket Studio</p>
+          </div>
+        </div>
+
+        <div class="col-xs-6 .col-sm-6 col-md-6">
+          <ul>
+            <li class="socialMedia"> <a id="Twitter" href="https://twitter.com/GLnore" target="_blank"> <img src="http://icons.iconarchive.com/icons/iconshots/social-media-network/32/twitter-icon.png"/> </a> </li>
+            <li class="socialMedia"> <a id="Facebook" href="https://www.facebook.com/Xicor" target="_blank"> <img src="https://beatty.house.gov/profiles/congress/modules/contrib/socialmedia/icons/levelten/glossy/32x32/facebook.png"/> </a> </li>
+            <li class="socialMedia"> <a id="Fiverr" href="https://www.fiverr.com/lawrence_lrs" target="_blank"> <img src="http://www.icon100.com/up/2904/32/fiverr.png"/> </a> </li>
+            <li class="socialMedia"> <a id="Etsy" href="https://www.etsy.com/people/LittleRocketStudio" target="_blank"> <img src="http://icons.iconarchive.com/icons/limav/flat-gradient-social/32/Etsy-icon.png"/> </a> </li>
+            <li class="socialMedia"> <a id="Linkedin" href="https://www.linkedin.com/in/lawrence-goedrich-55b22940" target="_blank"> <img src="http://www.arabsocialmediareport.com/images/linkedin.png"/> </a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+    <!-- Modules -->
+    <script src="js/app.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/SuggestionController.js"></script>
+    <!-- Directives -->
+    <script src="js/directives/exampleDirective.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/suggestions.js"></script>
+
+  </body>
+</html>
